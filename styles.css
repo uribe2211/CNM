@@ -172,6 +172,20 @@ body {
   box-shadow: var(--shadow-lg);
 }
 
+.profile-image {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: var(--shadow-lg);
+  transition: var(--transition);
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-lg);
+}
+
 /* Botones */
 .btn {
   display: inline-block;
@@ -588,6 +602,11 @@ body {
     width: 200px;
     height: 200px;
     font-size: 3rem;
+  }
+
+  .profile-image {
+    width: 200px;
+    height: 200px;
   }
 
   .profile-grid {
