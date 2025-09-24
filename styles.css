@@ -60,6 +60,18 @@ body {
   margin: 0 auto;
 }
 
+.nav-brand .logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-brand .logo-icon {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  animation: subtle-pulse 3s ease-in-out infinite;
+}
+
 .nav-brand h1 {
   font-size: 1.25rem;
   font-weight: 600;
@@ -68,6 +80,17 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   letter-spacing: 0.05em;
+  margin: 0;
+}
+
+@keyframes subtle-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
 }
 
 .nav-menu {
@@ -144,9 +167,39 @@ body {
 .hero-description {
   font-size: 1rem;
   color: var(--text-light);
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
   line-height: 1.6;
   max-width: 500px;
+}
+
+.hero-quote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: linear-gradient(
+    135deg,
+    rgba(30, 58, 138, 0.05),
+    rgba(5, 150, 105, 0.05)
+  );
+  border-radius: 0.5rem;
+  border-left: 3px solid var(--secondary-color);
+}
+
+.hero-quote i {
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.hero-quote span {
+  font-style: italic;
+  color: var(--text-color);
+  font-size: 0.95rem;
+  text-align: center;
+  font-weight: 400;
 }
 
 .hero-buttons {
@@ -655,6 +708,19 @@ body {
   font-size: 0.9rem;
 }
 
+.footer-info p {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.footer-info i {
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+  min-width: 16px;
+}
+
 .footer-bottom {
   text-align: center;
   padding-top: 1rem;
@@ -699,6 +765,24 @@ body {
 
   .hero-title {
     font-size: 2rem;
+  }
+
+  .nav-brand .logo-container {
+    gap: 0.4rem;
+  }
+
+  .nav-brand .logo-icon {
+    font-size: 1.3rem;
+  }
+
+  .hero-quote {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .hero-quote span {
+    font-size: 0.9rem;
   }
 
   .hero-subtitle {
